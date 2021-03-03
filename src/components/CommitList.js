@@ -18,7 +18,7 @@ export default function CommitList(props) {
                 {data.commit.message}
               </td>
               <td>{data.commit.author.name}</td>
-              <td>{data.commit.author.date}</td>
+              <td>{new Date(data.commit.author.date).toLocaleTimeString()}</td>
             </tr>
           );
         })}
